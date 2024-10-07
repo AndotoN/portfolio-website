@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import { useState } from "react";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
-import Projects from "./components/Projects/Projects";
+import Projects from "./components/Projects/Projects.jsx";
 
 function App() {
   const [activeComponent, setActiveComponent] = useState("about-me");

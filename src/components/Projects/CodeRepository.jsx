@@ -1,3 +1,4 @@
+// CodeRepository.jsx
 import { FaGithub } from "react-icons/fa"; // Importing the GitHub icon
 
 export default function CodeRepository() {

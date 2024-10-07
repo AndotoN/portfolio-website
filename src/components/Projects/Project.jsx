@@ -1,8 +1,10 @@
+// Project.jsx
 export default function Project({
   title,
   technologyStack,
   shortDescription,
   image,
+  onClick, // Use onClick instead of onChange
 }) {
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow">
@@ -13,7 +15,7 @@ export default function Project({
 
       {/* Project Image */}
       <img
-        src={image}
+        src={image[0]}
         alt={`${title} screenshot`}
         className="w-full h-48 object-cover rounded-md mb-4"
       />
@@ -36,9 +38,12 @@ export default function Project({
       {/* Short Description */}
       <p className="text-gray-700 mb-4">{shortDescription}</p>
 
-      {/* View More Button (Optional) */}
+      {/* View More Button */}
       <div className="text-center">
-        <button className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">
+        <button
+          onClick={onClick} // This should be passed as a valid function
+          className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out"
+        >
           View More
         </button>
       </div>
